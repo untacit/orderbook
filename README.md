@@ -1,4 +1,4 @@
-## Scafolding  Process Aware Software(ProcessApp) with  pHipster.
+## Scaffolding  Process Aware Software(ProcessApp) with  pHipster.
 
 get the image
 -------------
@@ -12,11 +12,11 @@ docker container exec -it jhipsterUntacit bash
 
 create the app
 --------------
-mkdir orderbook
-cd orderbook
-yo jhipster-untacit (make sure you choose Angular 1.x  and Maven)
-gulp inject
-./mvnw
+    mkdir orderbook
+    cd orderbook
+    yo jhipster-untacit (make sure you choose Angular 1.x  and Maven)
+    gulp inject
+    ./mvnw
 
 add process file
 ----------------
@@ -28,12 +28,12 @@ config JSON files for entities
 ----------------
 :TODO
 
-scafold Process and Domain entities
+scaffold Process and Domain entities
 --------------------------
 yo jhipster-untacit:entity-domain OrderBookDomain --regenerate
 yo jhipster-untacit:entity-process OrderBookProcess --regenerate
 
-scafold Task entities
+scaffold Task entities
 ---------------------
 yo jhipster-untacit:entity-task TaskSelectBook --regenerate
 

@@ -1,4 +1,4 @@
-### How to Scafold the Process Aware App(ProcessApp)
+## Scafolding  Process Aware Software(ProcessApp) with  pHipster.
 
 get the image
 -------------

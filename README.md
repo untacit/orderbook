@@ -1,4 +1,4 @@
-How to Scafold the Process Aware App(ProcessApp)
+### How to Scafold the Process Aware App(ProcessApp)
 
 get the image
 -------------
@@ -26,6 +26,7 @@ Entities -> Process Definition -> Create a new Process Definition
 
 config JSON files for entities
 ----------------
+:TODO
 
 scafold Process and Domain entities
 --------------------------
@@ -38,7 +39,8 @@ yo jhipster-untacit:entity-task TaskSelectBook --regenerate
 
 develop service tasks (delegate classes)
 ----------------------------------------
-## 
+:TODO 
 
 check gateways paths
 --------------------
+:TODO

@@ -1,0 +1,17 @@
+{
+    "name": "TaskSelectStore",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20191109023555",
+    "entityTableName": "task_select_store",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

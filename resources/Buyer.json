@@ -1,0 +1,42 @@
+{
+    "name": "Buyer",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "location",
+            "otherEntityRelationshipName": "buyer",
+            "relationshipName": "location",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "buyBookDomain",
+            "otherEntityRelationshipName": "buyer",
+            "relationshipName": "buyBookDomain",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191109023547",
+    "entityTableName": "buyer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

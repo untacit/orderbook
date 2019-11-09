@@ -1,0 +1,22 @@
+{
+    "name": "TaskSelectDelivery",
+    "fields": [
+        {
+            "fieldName": "shipTo",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191109023553",
+    "entityTableName": "task_select_delivery",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

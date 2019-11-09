@@ -1,0 +1,22 @@
+{
+    "name": "BuyBookProcess",
+    "fields": [
+        {
+            "fieldName": "businessKey",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191109023545",
+    "entityTableName": "buy_book_process",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

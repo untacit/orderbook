@@ -1,0 +1,34 @@
+{
+    "name": "TaskPayBook",
+    "fields": [
+        {
+            "fieldName": "nameOnCard",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "creditCard",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expiryDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ccv",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191109023556",
+    "entityTableName": "task_pay_book",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

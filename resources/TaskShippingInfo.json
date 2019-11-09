@@ -1,0 +1,17 @@
+{
+    "name": "TaskShippingInfo",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20191109023554",
+    "entityTableName": "task_shipping_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

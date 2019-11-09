@@ -4,7 +4,7 @@ get the image
 -------------
 docker login
 
-docker container run --name jhipsterUntacit -v ~/sandbox/pwHipster/apps:/home/jhipster/app -p 8080:8080 -p 9000:9000 -p 3001:3001 -d -t utelemaco/jhipsteruntacit:0.0.2
+docker container run --name jhipsterUntacit -v ~/sandbox/pas:/home/jhipster/app -p 8080:8080 -p 9000:9000 -p 3001:3001 -d -t utelemaco/jhipsteruntacit:0.0.2
 
 attach shell
 ------------

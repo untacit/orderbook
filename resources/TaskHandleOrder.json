@@ -1,0 +1,22 @@
+{
+    "name": "TaskHandleOrder",
+    "fields": [
+        {
+            "fieldName": "orderStatus",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191109023557",
+    "entityTableName": "task_handle_order",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

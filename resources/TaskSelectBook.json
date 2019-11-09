@@ -1,0 +1,17 @@
+{
+    "name": "TaskSelectBook",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20191109023552",
+    "entityTableName": "task_select_book",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "orderbook"
+    ]
+}

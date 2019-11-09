@@ -1,0 +1,23 @@
+{
+    "processDefinition" : {
+        "home": {
+            "title": "Process Definitions",
+            "createLabel": "Create a new Process Definition",
+            "createOrEditLabel": "Create or edit a Process Definition"
+        },
+        "created": "A new Process Definition is created with identifier {{ param }}",
+        "updated": "A Process Definition is updated with identifier {{ param }}",
+        "deleted": "A Process Definition is deleted with identifier {{ param }}",
+        "delete": {
+            "question": "Are you sure you want to delete Process Definition {{ id }}?"
+        },
+        "detail": {
+            "title": "Process Definition"
+        },
+        "name": "Name",
+        "specificationFile": "Specification File",
+        "camundaDeploymentId": "Camunda Deployment Id",
+        "camundaProcessDefinitionId": "Camunda Process Definition Id",
+        "bpmnProcessDefinitionId": "BPMN Process Definition Id"
+    }
+}

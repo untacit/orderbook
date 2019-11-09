@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span data-translate="processDefinition.detail.title">Process Definition</span> {{vm.processDefinition.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate=".processDefinition.name">Name</span></dt>
+        <dd>
+            <span>{{vm.processDefinition.name}}</span>
+        </dd>
+        <dt><span data-translate="processDefinition.specificationFile">Specification File</span></dt>
+        <dd>
+            <div ng-if="vm.processDefinition.specificationFile">
+                <a ng-click="vm.openFile(vm.processDefinition.specificationFileContentType, vm.processDefinition.specificationFile)" data-translate="entity.action.open">open</a>
+                {{vm.processDefinition.specificationFileContentType}}, {{vm.byteSize(vm.processDefinition.specificationFile)}}
+            </div>
+        </dd>
+        <dt><span data-translate="processDefinition.camundaDeploymentId">Camunda Deployment Id</span></dt>
+        <dd>
+            <span>{{vm.processDefinition.camundaDeploymentId}}</span>
+        </dd>
+        <dt><span data-translate="processDefinition.camundaProcessDefinitionId">Camunda Process Definition Id</span></dt>
+        <dd>
+            <span>{{vm.processDefinition.camundaProcessDefinitionId}}</span>
+        </dd>
+        <dt><span data-translate="processDefinition.identifier">Identifier</span></dt>
+        <dd>
+            <span>{{vm.processDefinition.identifier}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="process-definition-detail.edit({id:vm.processDefinition.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

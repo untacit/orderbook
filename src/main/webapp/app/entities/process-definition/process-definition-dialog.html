@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProcessDefinitionLabel" data-translate="processDefinition.home.createOrEditLabel">Create or edit a Process Definition</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.processDefinition.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.processDefinition.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="processDefinition.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.processDefinition.name"
+                    />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setSpecificationFile($file, vm.processDefinition)">
+            <label class="control-label" data-translate="processDefinition.specificationFile" for="field_specificationFile">Specification File</label>
+            <div>
+                <div ng-if="vm.processDefinition.specificationFile" class="help-block clearfix">
+                    <a class="pull-left" ng-click="vm.openFile(vm.processDefinition.specificationFileContentType, vm.processDefinition.specificationFile)" data-translate="entity.action.open">open</a><br>
+                    <span class="pull-left">{{vm.processDefinition.specificationFileContentType}}, {{vm.byteSize(vm.processDefinition.specificationFile)}}</span>
+                    <button type="button" ng-click="vm.processDefinition.specificationFile=null;vm.processDefinition.specificationFileContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setSpecificationFile($file, vm.processDefinition)" data-translate="entity.action.addblob">
+                    Add blob
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="specificationFile" id="field_specificationFile"
+                    ng-model="vm.processDefinition.specificationFile"
+                    />
+            <input type="hidden" class="form-control" name="specificationFileContentType" id="field_specificationFileContentType"
+                    ng-model="vm.processDefinition.specificationFileContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="processDefinition.bpmnProcessDefinitionId" for="field_bpmnProcessDefinitionId">bpmnProcessDefinitionId</label>
+            <input type="text" class="form-control" name="bpmnProcessDefinitionId" id="field_bpmnProcessDefinitionId"
+                    ng-model="vm.processDefinition.bpmnProcessDefinitionId"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+
+
+                                                                                                                                                                                                                                                         
+${AnsiColor.BLUE}UUUUUUUU     UUUUUUUU${AnsiColor.YELLOW}                 ${AnsiColor.GREEN}         tttt          ${AnsiColor.WHITE}               ${AnsiColor.RED}                      ${AnsiColor.CYAN}  iiii ${AnsiColor.MAGENTA}         tttt          
+${AnsiColor.BLUE}U::::::U     U::::::U${AnsiColor.YELLOW}                 ${AnsiColor.GREEN}      ttt:::t          ${AnsiColor.WHITE}               ${AnsiColor.RED}                      ${AnsiColor.CYAN} i::::i${AnsiColor.MAGENTA}      ttt:::t          
+${AnsiColor.BLUE}U::::::U     U::::::U${AnsiColor.YELLOW}                 ${AnsiColor.GREEN}      t:::::t          ${AnsiColor.WHITE}               ${AnsiColor.RED}                      ${AnsiColor.CYAN}  iiii ${AnsiColor.MAGENTA}      t:::::t          
+${AnsiColor.BLUE}UU:::::U     U:::::UU${AnsiColor.YELLOW}                 ${AnsiColor.GREEN}      t:::::t          ${AnsiColor.WHITE}               ${AnsiColor.RED}                      ${AnsiColor.CYAN}       ${AnsiColor.MAGENTA}      t:::::t          
+${AnsiColor.BLUE} U:::::U     U:::::U${AnsiColor.YELLOW}nnnn  nnnnnnnn    ${AnsiColor.GREEN}ttttttt:::::ttttttt    ${AnsiColor.WHITE}  aaaaaaaaaaaaa${AnsiColor.RED}      cccccccccccccccc${AnsiColor.CYAN}iiiiiii${AnsiColor.MAGENTA}ttttttt:::::ttttttt    
+${AnsiColor.BLUE} U:::::D     D:::::U${AnsiColor.YELLOW}n:::nn::::::::nn  ${AnsiColor.GREEN}t:::::::::::::::::t    ${AnsiColor.WHITE}  a::::::::::::a${AnsiColor.RED}   cc:::::::::::::::${AnsiColor.CYAN}ci:::::i${AnsiColor.MAGENTA}t:::::::::::::::::t    
+${AnsiColor.BLUE} U:::::D     D:::::U${AnsiColor.YELLOW}n::::::::::::::nn ${AnsiColor.GREEN}t:::::::::::::::::t    ${AnsiColor.WHITE}  aaaaaaaaa:::::a${AnsiColor.RED} c:::::::::::::::::c${AnsiColor.CYAN} i::::i${AnsiColor.MAGENTA}t:::::::::::::::::t    
+${AnsiColor.BLUE} U:::::D     D:::::U${AnsiColor.YELLOW}nn:::::::::::::::n${AnsiColor.GREEN}tttttt:::::::tttttt    ${AnsiColor.WHITE}           a::::a${AnsiColor.RED}c:::::::cccccc:::::c${AnsiColor.CYAN} i::::i${AnsiColor.MAGENTA}tttttt:::::::tttttt    
+${AnsiColor.BLUE} U:::::D     D:::::U${AnsiColor.YELLOW}  n:::::nnnn:::::n${AnsiColor.GREEN}      t:::::t          ${AnsiColor.WHITE}    aaaaaaa:::::a${AnsiColor.RED}c::::::c     ccccccc${AnsiColor.CYAN} i::::i${AnsiColor.MAGENTA}      t:::::t          
+${AnsiColor.BLUE} U:::::D     D:::::U${AnsiColor.YELLOW}  n::::n    n::::n${AnsiColor.GREEN}      t:::::t          ${AnsiColor.WHITE}  aa::::::::::::a${AnsiColor.RED}c:::::c             ${AnsiColor.CYAN} i::::i${AnsiColor.MAGENTA}      t:::::t          
+${AnsiColor.BLUE} U:::::D     D:::::U${AnsiColor.YELLOW}  n::::n    n::::n${AnsiColor.GREEN}      t:::::t          ${AnsiColor.WHITE} a::::aaaa::::::a${AnsiColor.RED}c:::::c             ${AnsiColor.CYAN} i::::i${AnsiColor.MAGENTA}      t:::::t          
+${AnsiColor.BLUE} U::::::U   U::::::U${AnsiColor.YELLOW}  n::::n    n::::n${AnsiColor.GREEN}      t:::::t    tttttt${AnsiColor.WHITE}a::::a    a:::::a${AnsiColor.RED}c::::::c     ccccccc${AnsiColor.CYAN} i::::i${AnsiColor.MAGENTA}      t:::::t    tttttt
+${AnsiColor.BLUE} U:::::::UUU:::::::U${AnsiColor.YELLOW}  n::::n    n::::n${AnsiColor.GREEN}      t::::::tttt:::::t${AnsiColor.WHITE}a::::a    a:::::a${AnsiColor.RED}c:::::::cccccc:::::c${AnsiColor.CYAN}i::::::i${AnsiColor.MAGENTA}     t::::::tttt:::::t
+${AnsiColor.BLUE}  UU:::::::::::::UU${AnsiColor.YELLOW}   n::::n    n::::n${AnsiColor.GREEN}      tt::::::::::::::t${AnsiColor.WHITE}a:::::aaaa::::::a${AnsiColor.RED} c:::::::::::::::::c${AnsiColor.CYAN}i::::::i${AnsiColor.MAGENTA}     tt::::::::::::::t
+${AnsiColor.BLUE}    UU:::::::::UU${AnsiColor.YELLOW}     n::::n    n::::n${AnsiColor.GREEN}        tt:::::::::::tt${AnsiColor.WHITE} a::::::::::aa:::a${AnsiColor.RED} cc:::::::::::::::c${AnsiColor.CYAN}i::::::i${AnsiColor.MAGENTA}       tt:::::::::::tt
+${AnsiColor.BLUE}      UUUUUUUUU${AnsiColor.YELLOW}       nnnnnn    nnnnnn${AnsiColor.GREEN}          ttttttttttt  ${AnsiColor.WHITE}  aaaaaaaaaa  aaaa${AnsiColor.RED}   cccccccccccccccc${AnsiColor.CYAN}iiiiiiii${AnsiColor.MAGENTA}         ttttttttttt  
+ 
+
+
+                                                                                                                                

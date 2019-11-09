@@ -1,0 +1,63 @@
+<div>
+    <h2 data-translate="task.home.title">Tasks</h2>
+    <jhi-alert></jhi-alert>
+
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-bordered table-striped table-custom">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="task.name">Name</span></th>
+                    <!--<th><span data-translate="task.createDate">Create Date</span></th>-->
+                    <!--<th><span data-translate="task.dueDate">Due Date</span></th>-->
+                    <!--<th><span data-translate="task.startTime">Start Time</span></th>-->
+                    <!--<th><span data-translate="task.endTime">End Time</span></th>-->
+                    <th><span data-translate="task.processInstanceId">Process Instance Id</span></th>
+                    <!--<th><span data-translate="task.owner">Owner</span></th>-->
+                    <!--<th><span data-translate="task.assignee">Assignee</span></th>-->
+                    <!--<th><span data-translate="task.executionId">Execution Id</span></th>-->
+                    <th><span data-translate="task.createTime">Create Time</span></th>
+                    <th><span data-translate="task.processDefinitionId">Process Definition Id</span></th>
+                    <!--<th><span data-translate="task.taskDefinitionKey">Task Definition Key</span></th>-->
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="task in vm.tasks track by task.id">
+                    <td>{{task.id}}</td>
+                    <td>{{task.name}}</td>
+                    <!--<td>{{task.createDate | date:'mediumDate'}}</td>-->
+                    <!--<td>{{task.dueDate | date:'mediumDate'}}</td>-->
+                    <!--<td>{{task.startTime | date:'mediumDate'}}</td>-->
+                    <!--<td>{{task.endTime | date:'mediumDate'}}</td>-->
+                    <td>{{task.processInstanceId}}</td>
+                    <!--<td>{{task.owner}}</td>-->
+                    <!--<td>{{task.assignee}}</td>-->
+                    <!--<td>{{task.executionId}}</td>-->
+                    <td>{{task.createTime | date:'medium'}}</td>
+                    <td>{{task.processDefinitionId}}</td>
+                    <!--<td>{{task.taskDefinitionKey}}</td>-->
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <!--
+                            <button type="submit"
+                                    ui-sref="task-detail({id:task.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            -->
+                            <button type="submit"
+                                    ui-sref="task.execute({processDefinitionId:task.processDefinitionId, taskDefinitionKey:task.taskDefinitionKey, processInstanceId:task.processInstanceId, taskId:task.id})"
+                                    class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-play"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.execute"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

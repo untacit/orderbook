@@ -1,0 +1,20 @@
+{
+    "orderbookApp": {
+        "orderBookProcess" : {
+            "home": {
+                "title": "Order Book Processes",
+                "createLabel": "Create a new Order Book Process",
+                "createOrEditLabel": "Create or edit a Order Book Process"
+            },
+            "created": "A new Order Book Process is created with identifier {{ param }}",
+            "updated": "A Order Book Process is updated with identifier {{ param }}",
+            "deleted": "A Order Book Process is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Order Book Process {{ id }}?"
+            },
+            "detail": {
+                "title": "Order Book Process"
+            }
+        }
+    }
+}

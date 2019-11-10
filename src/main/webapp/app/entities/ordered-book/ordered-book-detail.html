@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="orderbookApp.orderedBook.detail.title">Ordered Book</span> {{vm.orderedBook.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="orderbookApp.orderedBook.price">Price</span></dt>
+        <dd>
+            <span>{{vm.orderedBook.price}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderedBook.book">Book</span></dt>
+        <dd>
+            <a ui-sref="book-detail({id:vm.orderedBook.bookId})">{{vm.orderedBook.bookId}}</a>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderedBook.orderBookDomain">Order Book Domain</span></dt>
+        <dd>
+            <a ui-sref="order-book-domain-detail({id:vm.orderedBook.orderBookDomainId})">{{vm.orderedBook.orderBookDomainId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="ordered-book-detail.edit({id:vm.orderedBook.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

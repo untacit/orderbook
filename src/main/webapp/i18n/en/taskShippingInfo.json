@@ -1,0 +1,20 @@
+{
+    "orderbookApp": {
+        "taskShippingInfo" : {
+            "home": {
+                "title": "Task Shipping Infos",
+                "createLabel": "Create a new Task Shipping Info",
+                "createOrEditLabel": "Create or edit a Task Shipping Info"
+            },
+            "created": "A new Task Shipping Info is created with identifier {{ param }}",
+            "updated": "A Task Shipping Info is updated with identifier {{ param }}",
+            "deleted": "A Task Shipping Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Task Shipping Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Task Shipping Info"
+            }
+        }
+    }
+}

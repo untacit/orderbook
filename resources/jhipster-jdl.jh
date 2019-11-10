@@ -1,0 +1,75 @@
+
+entity OrderBookProcess {
+	businessKey String
+}
+entity OrderBookDomain {
+    startDate LocalDate,
+	endDate LocalDate,
+    orderAmmount BigDecimal,
+    orderStatus String,
+    shipTo String
+}
+
+entity PaymentDetails {
+    nameOnCard String,
+    creditCard String,
+    expiryDate String,
+    ccv String
+}
+
+// 
+entity Buyer {
+	name String,
+    email String,
+    streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+entity Store {
+	name String,
+    streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+
+entity Book{
+	name String,
+    author String,
+    pubYear String,
+    publisher String,
+    price BigDecimal
+}
+
+// just to save the ordered orice
+entity PurchasedBook{
+	bookID String
+	price BigDecimal
+    quantity BigDecimal
+}
+
+
+relationship OneToMany {
+	OrderBookDomain to PurchasedBook 
+}
+
+relationship OneToOne {
+    OrderBookDomain to PaymentDetails 
+}
+
+relationship ManyToMany {
+    OrderBookDomain to Book 
+  	OrderBookDomain to Buyer
+    OrderBookDomain to Store 
+}
+
+
+
+
+
+
+
+

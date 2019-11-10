@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="orderbookApp.buyer.detail.title">Buyer</span> {{vm.buyer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="orderbookApp.buyer.name">Name</span></dt>
+        <dd>
+            <span>{{vm.buyer.name}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.buyer.email">Email</span></dt>
+        <dd>
+            <span>{{vm.buyer.email}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.buyer.streetAddress">Street Address</span></dt>
+        <dd>
+            <span>{{vm.buyer.streetAddress}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.buyer.postalCode">Postal Code</span></dt>
+        <dd>
+            <span>{{vm.buyer.postalCode}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.buyer.city">City</span></dt>
+        <dd>
+            <span>{{vm.buyer.city}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.buyer.stateProvince">State Province</span></dt>
+        <dd>
+            <span>{{vm.buyer.stateProvince}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="buyer-detail.edit({id:vm.buyer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

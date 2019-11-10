@@ -1,0 +1,43 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTaskSetBuyerInfoLabel" data-translate="orderbookApp.taskSetBuyerInfo.home.createOrEditLabel">Create or edit a Task Set Buyer Info</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.taskSetBuyerInfo.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.taskSetBuyerInfo.id" readonly />
+        </div>
+        <div class="form-group">
+            <label for="id" data-translate="label.businessKey">Business Key</label>
+            <input type="text" class="form-control" id="businessKey" name="businessKey"
+                    ng-model="vm.taskSetBuyerInfo.orderBookProcessBusinessKey" ng-disabled="true" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="orderbookApp.taskSetBuyerInfo.shipTo" for="field_shipTo">Ship To</label>
+            <input  type="text" class="form-control" name="shipTo" id="field_shipTo"
+                    ng-model="vm.taskSetBuyerInfo.shipTo"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="orderbookApp.taskSetBuyerInfo.buyer" for="field_buyer">Buyer</label>
+            <select class="form-control" id="field_buyer" name="buyer" ng-model="vm.taskSetBuyerInfo.buyerId" ng-options="buyer.id as buyer.name for buyer in vm.buyers"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

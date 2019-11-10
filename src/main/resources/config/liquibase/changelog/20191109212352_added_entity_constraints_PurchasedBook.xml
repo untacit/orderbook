@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PurchasedBook.
+    -->
+    <changeSet id="20191109212352-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="order_book_domain_id"
+                                 baseTableName="purchased_book"
+                                 constraintName="fk_purchased_book_order_book_domain_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="order_book_domain"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+{
+    "orderbookApp": {
+        "buyer" : {
+            "home": {
+                "title": "Buyers",
+                "createLabel": "Create a new Buyer",
+                "createOrEditLabel": "Create or edit a Buyer"
+            },
+            "created": "A new Buyer is created with identifier {{ param }}",
+            "updated": "A Buyer is updated with identifier {{ param }}",
+            "deleted": "A Buyer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Buyer {{ id }}?"
+            },
+            "detail": {
+                "title": "Buyer"
+            },
+            "name": "Name",
+            "email": "Email",
+            "streetAddress": "Street Address",
+            "postalCode": "Postal Code",
+            "city": "City",
+            "stateProvince": "State Province",
+            "orderBookDomain": "Order Book Domain"
+        }
+    }
+}

@@ -1,0 +1,61 @@
+
+<div>
+    <h2><span data-translate="orderbookApp.orderBookDomain.detail.title">Order Book Domain</span> {{vm.orderBookDomain.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="orderbookApp.orderBookDomain.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.startDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.endDate">End Date</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.endDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.orderAmmount">Order Ammount</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.orderAmmount}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.orderStatus">Order Status</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.orderStatus}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.shipTo">Ship To</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.shipTo}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.paymentDetails">Payment Details</span></dt>
+        <dd>
+            <a ui-sref="payment-details-detail({id:vm.orderBookDomain.paymentDetailsId})">{{vm.orderBookDomain.paymentDetailsId}}</a>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.book">Book</span></dt>
+        <dd>
+            <span ng-repeat="book in vm.orderBookDomain.books">
+                <a ui-sref="book-detail({id: book.id})">{{book.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.buyer">Buyer</span></dt>
+        <dd>
+            <span ng-repeat="buyer in vm.orderBookDomain.buyers">
+                <a ui-sref="buyer-detail({id: buyer.id})">{{buyer.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.store">Store</span></dt>
+        <dd>
+            <span ng-repeat="store in vm.orderBookDomain.stores">
+                <a ui-sref="store-detail({id: store.id})">{{store.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="order-book-domain-detail.edit({id:vm.orderBookDomain.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

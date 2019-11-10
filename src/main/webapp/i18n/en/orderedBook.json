@@ -1,0 +1,23 @@
+{
+    "orderbookApp": {
+        "orderedBook" : {
+            "home": {
+                "title": "Ordered Books",
+                "createLabel": "Create a new Ordered Book",
+                "createOrEditLabel": "Create or edit a Ordered Book"
+            },
+            "created": "A new Ordered Book is created with identifier {{ param }}",
+            "updated": "A Ordered Book is updated with identifier {{ param }}",
+            "deleted": "A Ordered Book is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Ordered Book {{ id }}?"
+            },
+            "detail": {
+                "title": "Ordered Book"
+            },
+            "price": "Price",
+            "book": "Book",
+            "orderBookDomain": "Order Book Domain"
+        }
+    }
+}

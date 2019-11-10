@@ -43,6 +43,23 @@ public class CacheConfiguration {
             cm.createCache(com.mycompany.myapp.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.ProcessDefinition.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderBookDomain.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderBookDomain.class.getName() + ".orderedBooks", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderBookProcess.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Book.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Buyer.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderedBook.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Store.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.PurchasedBook.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderBookDomain.class.getName() + ".purchasedBooks", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderBookDomain.class.getName() + ".books", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderBookDomain.class.getName() + ".buyers", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.OrderBookDomain.class.getName() + ".stores", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.PaymentDetails.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Book.class.getName() + ".orderBookDomains", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Buyer.class.getName() + ".orderBookDomains", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Store.class.getName() + ".orderBookDomains", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,24 @@
+{
+    "orderbookApp": {
+        "taskPayBook" : {
+            "home": {
+                "title": "Task Pay Books",
+                "createLabel": "Create a new Task Pay Book",
+                "createOrEditLabel": "Create or edit a Task Pay Book"
+            },
+            "created": "A new Task Pay Book is created with identifier {{ param }}",
+            "updated": "A Task Pay Book is updated with identifier {{ param }}",
+            "deleted": "A Task Pay Book is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Task Pay Book {{ id }}?"
+            },
+            "detail": {
+                "title": "Task Pay Book"
+            },
+            "nameOnCard": "Name On Card",
+            "creditCard": "Credit Card",
+            "expiryDate": "Expiry Date",
+            "ccv": "Ccv"
+        }
+    }
+}

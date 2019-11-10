@@ -1,0 +1,66 @@
+<div>
+    <h2 data-translate="orderbookApp.orderBookDomain.home.title">Order Book Domains</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.startDate">Start Date</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.endDate">End Date</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.orderAmmount">Order Ammount</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.orderStatus">Order Status</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.shipTo">Ship To</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.paymentDetails">Payment Details</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.book">Book</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.buyer">Buyer</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.store">Store</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="orderBookDomain in vm.orderBookDomains track by orderBookDomain.id">
+                    <td><a ui-sref="order-book-domain-detail({id:orderBookDomain.id})">{{orderBookDomain.id}}</a></td>
+                        <td>{{orderBookDomain.startDate | date:'mediumDate'}}</td>
+                        <td>{{orderBookDomain.endDate | date:'mediumDate'}}</td>
+                    <td>{{orderBookDomain.orderAmmount}}</td>
+                    <td>{{orderBookDomain.orderStatus}}</td>
+                    <td>{{orderBookDomain.shipTo}}</td>
+                    <td>
+                        <a ui-sref="payment-details-detail({id:orderBookDomain.paymentDetailsId})">{{orderBookDomain.paymentDetailsId}}</a>
+                    </td>
+                    <td>
+                        <span ng-repeat="book in orderBookDomain.books">
+                            <a class="form-control-static" ui-sref="book-detail({id: book.id})">{{book.id}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td>
+                    <td>
+                        <span ng-repeat="buyer in orderBookDomain.buyers">
+                            <a class="form-control-static" ui-sref="buyer-detail({id: buyer.id})">{{buyer.id}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td>
+                    <td>
+                        <span ng-repeat="store in orderBookDomain.stores">
+                            <a class="form-control-static" ui-sref="store-detail({id: store.id})">{{store.id}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="order-book-domain-detail({id:orderBookDomain.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

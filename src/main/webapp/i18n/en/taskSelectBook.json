@@ -1,0 +1,21 @@
+{
+    "orderbookApp": {
+        "taskSelectBook" : {
+            "home": {
+                "title": "Task Select Books",
+                "createLabel": "Create a new Task Select Book",
+                "createOrEditLabel": "Create or edit a Task Select Book"
+            },
+            "created": "A new Task Select Book is created with identifier {{ param }}",
+            "updated": "A Task Select Book is updated with identifier {{ param }}",
+            "deleted": "A Task Select Book is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Task Select Book {{ id }}?"
+            },
+            "detail": {
+                "title": "Task Select Book"
+            },
+            "orderedBook": "Ordered Book"
+        }
+    }
+}

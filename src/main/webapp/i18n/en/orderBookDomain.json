@@ -1,0 +1,30 @@
+{
+    "orderbookApp": {
+        "orderBookDomain" : {
+            "home": {
+                "title": "Order Book Domains",
+                "createLabel": "Create a new Order Book Domain",
+                "createOrEditLabel": "Create or edit a Order Book Domain"
+            },
+            "created": "A new Order Book Domain is created with identifier {{ param }}",
+            "updated": "A Order Book Domain is updated with identifier {{ param }}",
+            "deleted": "A Order Book Domain is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Order Book Domain {{ id }}?"
+            },
+            "detail": {
+                "title": "Order Book Domain"
+            },
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "orderAmmount": "Order Ammount",
+            "orderStatus": "Order Status",
+            "shipTo": "Ship To",
+            "paymentDetails": "Payment Details",
+            "purchasedBook": "Purchased Book",
+            "book": "Book",
+            "buyer": "Buyer",
+            "store": "Store"
+        }
+    }
+}

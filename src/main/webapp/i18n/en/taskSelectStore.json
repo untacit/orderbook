@@ -1,0 +1,20 @@
+{
+    "orderbookApp": {
+        "taskSelectStore" : {
+            "home": {
+                "title": "Task Select Stores",
+                "createLabel": "Create a new Task Select Store",
+                "createOrEditLabel": "Create or edit a Task Select Store"
+            },
+            "created": "A new Task Select Store is created with identifier {{ param }}",
+            "updated": "A Task Select Store is updated with identifier {{ param }}",
+            "deleted": "A Task Select Store is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Task Select Store {{ id }}?"
+            },
+            "detail": {
+                "title": "Task Select Store"
+            }
+        }
+    }
+}

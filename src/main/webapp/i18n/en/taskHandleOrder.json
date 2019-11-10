@@ -1,0 +1,21 @@
+{
+    "orderbookApp": {
+        "taskHandleOrder" : {
+            "home": {
+                "title": "Task Handle Orders",
+                "createLabel": "Create a new Task Handle Order",
+                "createOrEditLabel": "Create or edit a Task Handle Order"
+            },
+            "created": "A new Task Handle Order is created with identifier {{ param }}",
+            "updated": "A Task Handle Order is updated with identifier {{ param }}",
+            "deleted": "A Task Handle Order is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Task Handle Order {{ id }}?"
+            },
+            "detail": {
+                "title": "Task Handle Order"
+            },
+            "orderStatus": "Order Status"
+        }
+    }
+}

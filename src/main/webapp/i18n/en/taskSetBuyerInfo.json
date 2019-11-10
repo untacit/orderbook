@@ -1,0 +1,22 @@
+{
+    "orderbookApp": {
+        "taskSetBuyerInfo" : {
+            "home": {
+                "title": "Task Set Buyer Infos",
+                "createLabel": "Create a new Task Set Buyer Info",
+                "createOrEditLabel": "Create or edit a Task Set Buyer Info"
+            },
+            "created": "A new Task Set Buyer Info is created with identifier {{ param }}",
+            "updated": "A Task Set Buyer Info is updated with identifier {{ param }}",
+            "deleted": "A Task Set Buyer Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Task Set Buyer Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Task Set Buyer Info"
+            },
+            "shipTo": "Ship To",
+            "buyer": "Buyer"
+        }
+    }
+}

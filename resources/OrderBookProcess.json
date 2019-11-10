@@ -1,0 +1,13 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+
+    ],
+    "changelogDate": "20190828214820",
+    "entityTableName": "order_book_process",
+    "bpmnProcessDefinitionId": "procidOrderBook",
+    "domainEntityType": "OrderBookDomain",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

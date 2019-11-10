@@ -1,0 +1,25 @@
+{
+    "orderbookApp": {
+        "paymentDetails" : {
+            "home": {
+                "title": "Payment Details",
+                "createLabel": "Create a new Payment Details",
+                "createOrEditLabel": "Create or edit a Payment Details"
+            },
+            "created": "A new Payment Details is created with identifier {{ param }}",
+            "updated": "A Payment Details is updated with identifier {{ param }}",
+            "deleted": "A Payment Details is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Payment Details {{ id }}?"
+            },
+            "detail": {
+                "title": "Payment Details"
+            },
+            "nameOnCard": "Name On Card",
+            "creditCard": "Credit Card",
+            "expiryDate": "Expiry Date",
+            "ccv": "Ccv",
+            "orderBookDomain": "Order Book Domain"
+        }
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "paymentDetails",
+            "otherEntityRelationshipName": "orderBookDomain",
+            "relationshipName": "paymentDetails",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "purchasedBook",
+            "otherEntityRelationshipName": "orderBookDomain",
+            "relationshipName": "purchasedBook"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "book",
+            "otherEntityRelationshipName": "orderBookDomain",
+            "relationshipName": "book",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "buyer",
+            "otherEntityRelationshipName": "orderBookDomain",
+            "relationshipName": "buyer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "store",
+            "otherEntityRelationshipName": "orderBookDomain",
+            "relationshipName": "store",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "orderAmmount",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "orderStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shipTo",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20190828214820",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "order_book_domain",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

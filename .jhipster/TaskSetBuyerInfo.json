@@ -1,0 +1,21 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "buyer",
+            "otherEntityName": "buyer",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "shipTo",
+            "fieldType": "String"
+        }
+    ],
+    "bpmnProcessDefinitionId": "procidOrderBook",
+    "bpmnTaskDefinitionId": "taskSetBuyerInfo",
+    "processEntityType": "OrderBookProcess",
+    "domainEntityType": "OrderBookDomain"
+}

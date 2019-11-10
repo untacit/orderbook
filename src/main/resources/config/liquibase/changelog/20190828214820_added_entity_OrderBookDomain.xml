@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity OrderBookDomain.
+    -->
+    <changeSet id="20190828214820-1" author="jhipster">
+        <createTable tableName="order_book_domain">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="start_date" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="end_date" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="order_ammount" type="decimal(10,2)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="order_status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ship_to" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="payment_details_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+        <createTable tableName="order_book_domain_book">
+            <column name="books_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="order_book_domains_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="order_book_domains_id, books_id" tableName="order_book_domain_book"/>
+        
+        <createTable tableName="order_book_domain_buyer">
+            <column name="buyers_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="order_book_domains_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="order_book_domains_id, buyers_id" tableName="order_book_domain_buyer"/>
+        
+        <createTable tableName="order_book_domain_store">
+            <column name="stores_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="order_book_domains_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="order_book_domains_id, stores_id" tableName="order_book_domain_store"/>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

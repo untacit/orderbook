@@ -1,0 +1,23 @@
+{
+    "orderbookApp": {
+        "purchasedBook" : {
+            "home": {
+                "title": "Purchased Books",
+                "createLabel": "Create a new Purchased Book",
+                "createOrEditLabel": "Create or edit a Purchased Book"
+            },
+            "created": "A new Purchased Book is created with identifier {{ param }}",
+            "updated": "A Purchased Book is updated with identifier {{ param }}",
+            "deleted": "A Purchased Book is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Purchased Book {{ id }}?"
+            },
+            "detail": {
+                "title": "Purchased Book"
+            },
+            "quantity": "Quantity",
+            "price": "Price",
+            "orderBookDomain": "Order Book Domain"
+        }
+    }
+}

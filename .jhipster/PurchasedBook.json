@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "orderBookDomain",
+            "otherEntityRelationshipName": "purchasedBook",
+            "relationshipName": "orderBookDomain",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min"
+            ],
+            "fieldValidateRulesMin": "1"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": "0"
+        }
+    ],
+    "changelogDate": "20191109212352",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "purchased_book",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

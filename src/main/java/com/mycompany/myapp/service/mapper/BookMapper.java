@@ -12,8 +12,6 @@ import org.mapstruct.*;
 public interface BookMapper extends EntityMapper<BookDTO, Book> {
 
 
-    @Mapping(target = "orderBookDomains", ignore = true)
-    Book toEntity(BookDTO bookDTO);
 
     default Book fromId(Long id) {
         if (id == null) {

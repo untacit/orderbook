@@ -23,6 +23,8 @@ public class PurchasedBookDTO implements Serializable {
 
     private Long orderBookDomainId;
 
+    private Long bookId;
+
     public Long getId() {
         return id;
     }
@@ -53,6 +55,14 @@ public class PurchasedBookDTO implements Serializable {
 
     public void setOrderBookDomainId(Long orderBookDomainId) {
         this.orderBookDomainId = orderBookDomainId;
+    }
+
+    public Long getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(Long bookId) {
+        this.bookId = bookId;
     }
 
     @Override

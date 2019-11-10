@@ -5,9 +5,9 @@
         .module('orderbookApp')
         .controller('BookDetailController', BookDetailController);
 
-    BookDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Book', 'OrderBookDomain'];
+    BookDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Book'];
 
-    function BookDetailController($scope, $rootScope, $stateParams, previousState, entity, Book, OrderBookDomain) {
+    function BookDetailController($scope, $rootScope, $stateParams, previousState, entity, Book) {
         var vm = this;
 
         vm.book = entity;

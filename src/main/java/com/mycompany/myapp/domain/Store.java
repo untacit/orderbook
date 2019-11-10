@@ -40,7 +40,7 @@ public class Store implements Serializable {
     @Column(name = "state_province")
     private String stateProvince;
 
-    @ManyToMany(mappedBy = "stores")
+    @OneToMany(mappedBy = "store")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<OrderBookDomain> orderBookDomains = new HashSet<>();
@@ -130,13 +130,13 @@ public class Store implements Serializable {
 
     public Store addOrderBookDomain(OrderBookDomain orderBookDomain) {
         this.orderBookDomains.add(orderBookDomain);
-        orderBookDomain.getStores().add(this);
+        orderBookDomain.setStore(this);
         return this;
     }
 
     public Store removeOrderBookDomain(OrderBookDomain orderBookDomain) {
         this.orderBookDomains.remove(orderBookDomain);
-        orderBookDomain.getStores().remove(this);
+        orderBookDomain.setStore(null);
         return this;
     }
 

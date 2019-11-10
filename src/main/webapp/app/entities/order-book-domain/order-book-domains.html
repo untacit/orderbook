@@ -15,9 +15,11 @@
                     <th><span data-translate="orderbookApp.orderBookDomain.endDate">End Date</span></th>
                     <th><span data-translate="orderbookApp.orderBookDomain.orderAmmount">Order Ammount</span></th>
                     <th><span data-translate="orderbookApp.orderBookDomain.orderStatus">Order Status</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.nameOnCard">Name On Card</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.creditCard">Credit Card</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.expiryDate">Expiry Date</span></th>
+                    <th><span data-translate="orderbookApp.orderBookDomain.ccv">Ccv</span></th>
                     <th><span data-translate="orderbookApp.orderBookDomain.shipTo">Ship To</span></th>
-                    <th><span data-translate="orderbookApp.orderBookDomain.paymentDetails">Payment Details</span></th>
-                    <th><span data-translate="orderbookApp.orderBookDomain.book">Book</span></th>
                     <th><span data-translate="orderbookApp.orderBookDomain.buyer">Buyer</span></th>
                     <th><span data-translate="orderbookApp.orderBookDomain.store">Store</span></th>
                     <th></th>
@@ -30,24 +32,16 @@
                         <td>{{orderBookDomain.endDate | date:'mediumDate'}}</td>
                     <td>{{orderBookDomain.orderAmmount}}</td>
                     <td>{{orderBookDomain.orderStatus}}</td>
+                    <td>{{orderBookDomain.nameOnCard}}</td>
+                    <td>{{orderBookDomain.creditCard}}</td>
+                    <td>{{orderBookDomain.expiryDate}}</td>
+                    <td>{{orderBookDomain.ccv}}</td>
                     <td>{{orderBookDomain.shipTo}}</td>
                     <td>
-                        <a ui-sref="payment-details-detail({id:orderBookDomain.paymentDetailsId})">{{orderBookDomain.paymentDetailsId}}</a>
+                        <a ui-sref="buyer-detail({id:orderBookDomain.buyerId})">{{orderBookDomain.buyerName}}</a>
                     </td>
                     <td>
-                        <span ng-repeat="book in orderBookDomain.books">
-                            <a class="form-control-static" ui-sref="book-detail({id: book.id})">{{book.id}}</a>{{$last ? '' : ', '}}
-                        </span>
-                    </td>
-                    <td>
-                        <span ng-repeat="buyer in orderBookDomain.buyers">
-                            <a class="form-control-static" ui-sref="buyer-detail({id: buyer.id})">{{buyer.id}}</a>{{$last ? '' : ', '}}
-                        </span>
-                    </td>
-                    <td>
-                        <span ng-repeat="store in orderBookDomain.stores">
-                            <a class="form-control-static" ui-sref="store-detail({id: store.id})">{{store.id}}</a>{{$last ? '' : ', '}}
-                        </span>
+                        <a ui-sref="store-detail({id:orderBookDomain.storeId})">{{orderBookDomain.storeName}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

@@ -5,15 +5,16 @@
         .module('orderbookApp')
         .controller('PurchasedBookDialogController', PurchasedBookDialogController);
 
-    PurchasedBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'PurchasedBook', 'OrderBookDomain'];
+    PurchasedBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'PurchasedBook', 'OrderBookDomain', 'Book'];
 
-    function PurchasedBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, PurchasedBook, OrderBookDomain) {
+    function PurchasedBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, PurchasedBook, OrderBookDomain, Book) {
         var vm = this;
 
         vm.purchasedBook = entity;
         vm.clear = clear;
         vm.save = save;
         vm.orderbookdomains = OrderBookDomain.query();
+        vm.books = Book.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

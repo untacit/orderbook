@@ -16,6 +16,10 @@
         <dd>
             <a ui-sref="order-book-domain-detail({id:vm.purchasedBook.orderBookDomainId})">{{vm.purchasedBook.orderBookDomainId}}</a>
         </dd>
+        <dt><span data-translate="orderbookApp.purchasedBook.book">Book</span></dt>
+        <dd>
+            <a ui-sref="book-detail({id:vm.purchasedBook.bookId})">{{vm.purchasedBook.bookId}}</a>
+        </dd>
     </dl>
 
     <button type="submit"

@@ -39,38 +39,31 @@ public class OrderBookDomain implements Serializable {
     @Column(name = "order_status")
     private String orderStatus;
 
+    @Column(name = "name_on_card")
+    private String nameOnCard;
+
+    @Column(name = "credit_card")
+    private String creditCard;
+
+    @Column(name = "expiry_date")
+    private String expiryDate;
+
+    @Column(name = "ccv")
+    private String ccv;
+
     @Column(name = "ship_to")
     private String shipTo;
-
-    @OneToOne
-    @JoinColumn(unique = true)
-    private PaymentDetails paymentDetails;
 
     @OneToMany(mappedBy = "orderBookDomain")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<PurchasedBook> purchasedBooks = new HashSet<>();
 
-    @ManyToMany
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "order_book_domain_book",
-               joinColumns = @JoinColumn(name="order_book_domains_id", referencedColumnName="id"),
-               inverseJoinColumns = @JoinColumn(name="books_id", referencedColumnName="id"))
-    private Set<Book> books = new HashSet<>();
+    @ManyToOne
+    private Buyer buyer;
 
-    @ManyToMany
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "order_book_domain_buyer",
-               joinColumns = @JoinColumn(name="order_book_domains_id", referencedColumnName="id"),
-               inverseJoinColumns = @JoinColumn(name="buyers_id", referencedColumnName="id"))
-    private Set<Buyer> buyers = new HashSet<>();
-
-    @ManyToMany
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "order_book_domain_store",
-               joinColumns = @JoinColumn(name="order_book_domains_id", referencedColumnName="id"),
-               inverseJoinColumns = @JoinColumn(name="stores_id", referencedColumnName="id"))
-    private Set<Store> stores = new HashSet<>();
+    @ManyToOne
+    private Store store;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -133,6 +126,58 @@ public class OrderBookDomain implements Serializable {
         this.orderStatus = orderStatus;
     }
 
+    public String getNameOnCard() {
+        return nameOnCard;
+    }
+
+    public OrderBookDomain nameOnCard(String nameOnCard) {
+        this.nameOnCard = nameOnCard;
+        return this;
+    }
+
+    public void setNameOnCard(String nameOnCard) {
+        this.nameOnCard = nameOnCard;
+    }
+
+    public String getCreditCard() {
+        return creditCard;
+    }
+
+    public OrderBookDomain creditCard(String creditCard) {
+        this.creditCard = creditCard;
+        return this;
+    }
+
+    public void setCreditCard(String creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public String getExpiryDate() {
+        return expiryDate;
+    }
+
+    public OrderBookDomain expiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+        return this;
+    }
+
+    public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public String getCcv() {
+        return ccv;
+    }
+
+    public OrderBookDomain ccv(String ccv) {
+        this.ccv = ccv;
+        return this;
+    }
+
+    public void setCcv(String ccv) {
+        this.ccv = ccv;
+    }
+
     public String getShipTo() {
         return shipTo;
     }
@@ -144,19 +189,6 @@ public class OrderBookDomain implements Serializable {
 
     public void setShipTo(String shipTo) {
         this.shipTo = shipTo;
-    }
-
-    public PaymentDetails getPaymentDetails() {
-        return paymentDetails;
-    }
-
-    public OrderBookDomain paymentDetails(PaymentDetails paymentDetails) {
-        this.paymentDetails = paymentDetails;
-        return this;
-    }
-
-    public void setPaymentDetails(PaymentDetails paymentDetails) {
-        this.paymentDetails = paymentDetails;
     }
 
     public Set<PurchasedBook> getPurchasedBooks() {
@@ -184,79 +216,30 @@ public class OrderBookDomain implements Serializable {
         this.purchasedBooks = purchasedBooks;
     }
 
-    public Set<Book> getBooks() {
-        return books;
+    public Buyer getBuyer() {
+        return buyer;
     }
 
-    public OrderBookDomain books(Set<Book> books) {
-        this.books = books;
+    public OrderBookDomain buyer(Buyer buyer) {
+        this.buyer = buyer;
         return this;
     }
 
-    public OrderBookDomain addBook(Book book) {
-        this.books.add(book);
-        book.getOrderBookDomains().add(this);
+    public void setBuyer(Buyer buyer) {
+        this.buyer = buyer;
+    }
+
+    public Store getStore() {
+        return store;
+    }
+
+    public OrderBookDomain store(Store store) {
+        this.store = store;
         return this;
     }
 
-    public OrderBookDomain removeBook(Book book) {
-        this.books.remove(book);
-        book.getOrderBookDomains().remove(this);
-        return this;
-    }
-
-    public void setBooks(Set<Book> books) {
-        this.books = books;
-    }
-
-    public Set<Buyer> getBuyers() {
-        return buyers;
-    }
-
-    public OrderBookDomain buyers(Set<Buyer> buyers) {
-        this.buyers = buyers;
-        return this;
-    }
-
-    public OrderBookDomain addBuyer(Buyer buyer) {
-        this.buyers.add(buyer);
-        buyer.getOrderBookDomains().add(this);
-        return this;
-    }
-
-    public OrderBookDomain removeBuyer(Buyer buyer) {
-        this.buyers.remove(buyer);
-        buyer.getOrderBookDomains().remove(this);
-        return this;
-    }
-
-    public void setBuyers(Set<Buyer> buyers) {
-        this.buyers = buyers;
-    }
-
-    public Set<Store> getStores() {
-        return stores;
-    }
-
-    public OrderBookDomain stores(Set<Store> stores) {
-        this.stores = stores;
-        return this;
-    }
-
-    public OrderBookDomain addStore(Store store) {
-        this.stores.add(store);
-        store.getOrderBookDomains().add(this);
-        return this;
-    }
-
-    public OrderBookDomain removeStore(Store store) {
-        this.stores.remove(store);
-        store.getOrderBookDomains().remove(this);
-        return this;
-    }
-
-    public void setStores(Set<Store> stores) {
-        this.stores = stores;
+    public void setStore(Store store) {
+        this.store = store;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -288,6 +271,10 @@ public class OrderBookDomain implements Serializable {
             ", endDate='" + getEndDate() + "'" +
             ", orderAmmount=" + getOrderAmmount() +
             ", orderStatus='" + getOrderStatus() + "'" +
+            ", nameOnCard='" + getNameOnCard() + "'" +
+            ", creditCard='" + getCreditCard() + "'" +
+            ", expiryDate='" + getExpiryDate() + "'" +
+            ", ccv='" + getCcv() + "'" +
             ", shipTo='" + getShipTo() + "'" +
             "}";
     }

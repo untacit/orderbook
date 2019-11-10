@@ -18,6 +18,12 @@
             <input type="text" class="form-control" id="businessKey" name="businessKey"
                     ng-model="vm.taskShippingInfo.orderBookProcessBusinessKey" ng-disabled="true" />
         </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="orderbookApp.taskShippingInfo.shipTo" for="field_shipTo">Ship To</label>
+            <input  type="text" class="form-control" name="shipTo" id="field_shipTo"
+                    ng-model="vm.taskShippingInfo.shipTo"
+                    />
+        </div>
 
     </div>
     <div class="modal-footer">

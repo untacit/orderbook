@@ -52,7 +52,7 @@ public class OrderBookDomainService {
     @Transactional(readOnly = true)
     public List<OrderBookDomainDTO> findAll() {
         log.debug("Request to get all OrderBookDomains");
-        return orderBookDomainRepository.findAllWithEagerRelationships().stream()
+        return orderBookDomainRepository.findAll().stream()
             .map(orderBookDomainMapper::toDto)
             .collect(Collectors.toCollection(LinkedList::new));
     }
@@ -66,7 +66,7 @@ public class OrderBookDomainService {
     @Transactional(readOnly = true)
     public OrderBookDomainDTO findOne(Long id) {
         log.debug("Request to get OrderBookDomain : {}", id);
-        OrderBookDomain orderBookDomain = orderBookDomainRepository.findOneWithEagerRelationships(id);
+        OrderBookDomain orderBookDomain = orderBookDomainRepository.findOne(id);
         return orderBookDomainMapper.toDto(orderBookDomain);
     }
 

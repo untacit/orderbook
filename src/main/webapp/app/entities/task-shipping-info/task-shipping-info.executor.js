@@ -3,7 +3,7 @@
 
     angular
         .module('orderbookApp')
-        .factory('procidOrderBook-taskShippingInfo-executor', TaskShippingInfoExecutor);
+        .factory('procidOrderBook-taskAddShippingInfo-executor', TaskShippingInfoExecutor);
 
     TaskShippingInfoExecutor.$inject = ['TaskShippingInfo', '$uibModal', '$state'];
 

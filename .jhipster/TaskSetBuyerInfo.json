@@ -5,7 +5,6 @@
             "otherEntityName": "buyer",
             "relationshipType": "many-to-one",
             "otherEntityField": "name"
-
         }
     ],
     "fields": [

@@ -17,7 +17,8 @@
             },
             "quantity": "Quantity",
             "price": "Price",
-            "orderBookDomain": "Order Book Domain"
+            "orderBookDomain": "Order Book Domain",
+            "book": "Book"
         }
     }
 }

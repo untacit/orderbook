@@ -14,7 +14,8 @@
             },
             "detail": {
                 "title": "Task Select Store"
-            }
+            },
+            "store": "Store"
         }
     }
 }

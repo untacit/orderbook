@@ -2,6 +2,8 @@ package com.mycompany.myapp.service.dto;
 
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -14,6 +16,10 @@ public class TaskSelectStoreDTO implements Serializable {
     private Long orderBookProcessId;
 
     private String orderBookProcessBusinessKey;
+
+    private Long storeId;
+
+    private String storeName;
 
     public Long getId() {
         return id;
@@ -37,6 +43,22 @@ public class TaskSelectStoreDTO implements Serializable {
 
     public void setOrderBookProcessBusinessKey(String orderBookProcessBusinessKey) {
         this.orderBookProcessBusinessKey = orderBookProcessBusinessKey;
+    }
+
+    public Long getStoreId() {
+        return storeId;
+    }
+
+    public void setStoreId(Long storeId) {
+        this.storeId = storeId;
+    }
+
+    public String getStoreName() {
+        return storeName;
+    }
+
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
     }
 
     @Override

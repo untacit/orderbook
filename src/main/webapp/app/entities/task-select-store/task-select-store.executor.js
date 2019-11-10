@@ -3,7 +3,7 @@
 
     angular
         .module('orderbookApp')
-        .factory('procidOrderBook-taskSelectStore-executor', TaskSelectStoreExecutor);
+        .factory('procidOrderBook-taskSelectPickUpStore-executor', TaskSelectStoreExecutor);
 
     TaskSelectStoreExecutor.$inject = ['TaskSelectStore', '$uibModal', '$state'];
 

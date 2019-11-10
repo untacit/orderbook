@@ -15,6 +15,8 @@ public class TaskShippingInfoDTO implements Serializable {
 
     private String orderBookProcessBusinessKey;
 
+    private String shipTo;
+
     public Long getId() {
         return id;
     }
@@ -37,6 +39,14 @@ public class TaskShippingInfoDTO implements Serializable {
 
     public void setOrderBookProcessBusinessKey(String orderBookProcessBusinessKey) {
         this.orderBookProcessBusinessKey = orderBookProcessBusinessKey;
+    }
+
+    public String getShipTo() {
+        return shipTo;
+    }
+
+    public void setShipTo(String shipTo) {
+        this.shipTo = shipTo;
     }
 
     @Override
@@ -64,6 +74,7 @@ public class TaskShippingInfoDTO implements Serializable {
     public String toString() {
         return "TaskShippingInfoDTO{" +
             "id=" + getId() +
+            ", shipTo='" + getShipTo() + "'" +
             "}";
     }
 }

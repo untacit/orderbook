@@ -19,8 +19,7 @@
             "author": "Author",
             "pubYear": "Pub Year",
             "publisher": "Publisher",
-            "price": "Price",
-            "orderBookDomain": "Order Book Domain"
+            "price": "Price"
         }
     }
 }

@@ -14,7 +14,8 @@
             },
             "detail": {
                 "title": "Task Shipping Info"
-            }
+            },
+            "shipTo": "Ship To"
         }
     }
 }

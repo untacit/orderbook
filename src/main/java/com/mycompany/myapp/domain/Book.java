@@ -1,6 +1,5 @@
 package com.mycompany.myapp.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -8,8 +7,6 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -40,11 +37,6 @@ public class Book implements Serializable {
 
     @Column(name = "price", precision=10, scale=2)
     private BigDecimal price;
-
-    @ManyToMany(mappedBy = "books")
-    @JsonIgnore
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<OrderBookDomain> orderBookDomains = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -118,31 +110,6 @@ public class Book implements Serializable {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public Set<OrderBookDomain> getOrderBookDomains() {
-        return orderBookDomains;
-    }
-
-    public Book orderBookDomains(Set<OrderBookDomain> orderBookDomains) {
-        this.orderBookDomains = orderBookDomains;
-        return this;
-    }
-
-    public Book addOrderBookDomain(OrderBookDomain orderBookDomain) {
-        this.orderBookDomains.add(orderBookDomain);
-        orderBookDomain.getBooks().add(this);
-        return this;
-    }
-
-    public Book removeOrderBookDomain(OrderBookDomain orderBookDomain) {
-        this.orderBookDomains.remove(orderBookDomain);
-        orderBookDomain.getBooks().remove(this);
-        return this;
-    }
-
-    public void setOrderBookDomains(Set<OrderBookDomain> orderBookDomains) {
-        this.orderBookDomains = orderBookDomains;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

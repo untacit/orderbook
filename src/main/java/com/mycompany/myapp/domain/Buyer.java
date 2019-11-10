@@ -43,7 +43,7 @@ public class Buyer implements Serializable {
     @Column(name = "state_province")
     private String stateProvince;
 
-    @ManyToMany(mappedBy = "buyers")
+    @OneToMany(mappedBy = "buyer")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<OrderBookDomain> orderBookDomains = new HashSet<>();
@@ -146,13 +146,13 @@ public class Buyer implements Serializable {
 
     public Buyer addOrderBookDomain(OrderBookDomain orderBookDomain) {
         this.orderBookDomains.add(orderBookDomain);
-        orderBookDomain.getBuyers().add(this);
+        orderBookDomain.setBuyer(this);
         return this;
     }
 
     public Buyer removeOrderBookDomain(OrderBookDomain orderBookDomain) {
         this.orderBookDomains.remove(orderBookDomain);
-        orderBookDomain.getBuyers().remove(this);
+        orderBookDomain.setBuyer(null);
         return this;
     }
 

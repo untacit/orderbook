@@ -35,6 +35,9 @@ public class PurchasedBook implements Serializable {
     @ManyToOne
     private OrderBookDomain orderBookDomain;
 
+    @ManyToOne
+    private Book book;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -81,6 +84,19 @@ public class PurchasedBook implements Serializable {
 
     public void setOrderBookDomain(OrderBookDomain orderBookDomain) {
         this.orderBookDomain = orderBookDomain;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public PurchasedBook book(Book book) {
+        this.book = book;
+        return this;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

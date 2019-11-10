@@ -23,15 +23,23 @@ public class OrderBookDomainDTO implements Serializable {
 
     private String orderStatus;
 
+    private String nameOnCard;
+
+    private String creditCard;
+
+    private String expiryDate;
+
+    private String ccv;
+
     private String shipTo;
 
-    private Long paymentDetailsId;
+    private Long buyerId;
 
-    private Set<BookDTO> books = new HashSet<>();
+    private String buyerName;
 
-    private Set<BuyerDTO> buyers = new HashSet<>();
+    private Long storeId;
 
-    private Set<StoreDTO> stores = new HashSet<>();
+    private String storeName;
 
     public Long getId() {
         return id;
@@ -73,6 +81,38 @@ public class OrderBookDomainDTO implements Serializable {
         this.orderStatus = orderStatus;
     }
 
+    public String getNameOnCard() {
+        return nameOnCard;
+    }
+
+    public void setNameOnCard(String nameOnCard) {
+        this.nameOnCard = nameOnCard;
+    }
+
+    public String getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(String creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public String getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public String getCcv() {
+        return ccv;
+    }
+
+    public void setCcv(String ccv) {
+        this.ccv = ccv;
+    }
+
     public String getShipTo() {
         return shipTo;
     }
@@ -81,36 +121,36 @@ public class OrderBookDomainDTO implements Serializable {
         this.shipTo = shipTo;
     }
 
-    public Long getPaymentDetailsId() {
-        return paymentDetailsId;
+    public Long getBuyerId() {
+        return buyerId;
     }
 
-    public void setPaymentDetailsId(Long paymentDetailsId) {
-        this.paymentDetailsId = paymentDetailsId;
+    public void setBuyerId(Long buyerId) {
+        this.buyerId = buyerId;
     }
 
-    public Set<BookDTO> getBooks() {
-        return books;
+    public String getBuyerName() {
+        return buyerName;
     }
 
-    public void setBooks(Set<BookDTO> books) {
-        this.books = books;
+    public void setBuyerName(String buyerName) {
+        this.buyerName = buyerName;
     }
 
-    public Set<BuyerDTO> getBuyers() {
-        return buyers;
+    public Long getStoreId() {
+        return storeId;
     }
 
-    public void setBuyers(Set<BuyerDTO> buyers) {
-        this.buyers = buyers;
+    public void setStoreId(Long storeId) {
+        this.storeId = storeId;
     }
 
-    public Set<StoreDTO> getStores() {
-        return stores;
+    public String getStoreName() {
+        return storeName;
     }
 
-    public void setStores(Set<StoreDTO> stores) {
-        this.stores = stores;
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
     }
 
     @Override
@@ -142,6 +182,10 @@ public class OrderBookDomainDTO implements Serializable {
             ", endDate='" + getEndDate() + "'" +
             ", orderAmmount=" + getOrderAmmount() +
             ", orderStatus='" + getOrderStatus() + "'" +
+            ", nameOnCard='" + getNameOnCard() + "'" +
+            ", creditCard='" + getCreditCard() + "'" +
+            ", expiryDate='" + getExpiryDate() + "'" +
+            ", ccv='" + getCcv() + "'" +
             ", shipTo='" + getShipTo() + "'" +
             "}";
     }

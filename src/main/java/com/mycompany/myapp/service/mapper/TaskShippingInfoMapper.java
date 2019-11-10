@@ -17,11 +17,13 @@ public class TaskShippingInfoMapper {
         TaskShippingInfoDTO dto = new TaskShippingInfoDTO();
         dto.setOrderBookProcessId(orderBookProcess.getId());
         dto.setOrderBookProcessBusinessKey(orderBookProcess.getBusinessKey());
+        dto.setShipTo(orderBookProcess.getOrderBookDomain().getShipTo());
         return dto;
     }
 
 
     public void copyFromTaskDTOToProcessInstanceDTO(TaskShippingInfoDTO taskShippingInfoDTO, OrderBookProcessDTO orderBookProcessDTO) {
+        orderBookProcessDTO.getOrderBookDomain().setShipTo(taskShippingInfoDTO.getShipTo());
     }
 
 }

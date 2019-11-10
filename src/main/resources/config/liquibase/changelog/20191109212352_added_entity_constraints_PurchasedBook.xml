@@ -14,5 +14,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="order_book_domain"/>
 
+        <addForeignKeyConstraint baseColumnNames="book_id"
+                                 baseTableName="purchased_book"
+                                 constraintName="fk_purchased_book_book_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="book"/>
+
     </changeSet>
 </databaseChangeLog>

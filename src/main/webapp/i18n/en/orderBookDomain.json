@@ -19,10 +19,12 @@
             "endDate": "End Date",
             "orderAmmount": "Order Ammount",
             "orderStatus": "Order Status",
+            "nameOnCard": "Name On Card",
+            "creditCard": "Credit Card",
+            "expiryDate": "Expiry Date",
+            "ccv": "Ccv",
             "shipTo": "Ship To",
-            "paymentDetails": "Payment Details",
             "purchasedBook": "Purchased Book",
-            "book": "Book",
             "buyer": "Buyer",
             "store": "Store"
         }

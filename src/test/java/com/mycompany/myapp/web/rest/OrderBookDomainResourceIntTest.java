@@ -56,6 +56,18 @@ public class OrderBookDomainResourceIntTest {
     private static final String DEFAULT_ORDER_STATUS = "AAAAAAAAAA";
     private static final String UPDATED_ORDER_STATUS = "BBBBBBBBBB";
 
+    private static final String DEFAULT_NAME_ON_CARD = "AAAAAAAAAA";
+    private static final String UPDATED_NAME_ON_CARD = "BBBBBBBBBB";
+
+    private static final String DEFAULT_CREDIT_CARD = "AAAAAAAAAA";
+    private static final String UPDATED_CREDIT_CARD = "BBBBBBBBBB";
+
+    private static final String DEFAULT_EXPIRY_DATE = "AAAAAAAAAA";
+    private static final String UPDATED_EXPIRY_DATE = "BBBBBBBBBB";
+
+    private static final String DEFAULT_CCV = "AAAAAAAAAA";
+    private static final String UPDATED_CCV = "BBBBBBBBBB";
+
     private static final String DEFAULT_SHIP_TO = "AAAAAAAAAA";
     private static final String UPDATED_SHIP_TO = "BBBBBBBBBB";
 
@@ -107,6 +119,10 @@ public class OrderBookDomainResourceIntTest {
             .endDate(DEFAULT_END_DATE)
             .orderAmmount(DEFAULT_ORDER_AMMOUNT)
             .orderStatus(DEFAULT_ORDER_STATUS)
+            .nameOnCard(DEFAULT_NAME_ON_CARD)
+            .creditCard(DEFAULT_CREDIT_CARD)
+            .expiryDate(DEFAULT_EXPIRY_DATE)
+            .ccv(DEFAULT_CCV)
             .shipTo(DEFAULT_SHIP_TO);
         return orderBookDomain;
     }
@@ -136,6 +152,10 @@ public class OrderBookDomainResourceIntTest {
         assertThat(testOrderBookDomain.getEndDate()).isEqualTo(DEFAULT_END_DATE);
         assertThat(testOrderBookDomain.getOrderAmmount()).isEqualTo(DEFAULT_ORDER_AMMOUNT);
         assertThat(testOrderBookDomain.getOrderStatus()).isEqualTo(DEFAULT_ORDER_STATUS);
+        assertThat(testOrderBookDomain.getNameOnCard()).isEqualTo(DEFAULT_NAME_ON_CARD);
+        assertThat(testOrderBookDomain.getCreditCard()).isEqualTo(DEFAULT_CREDIT_CARD);
+        assertThat(testOrderBookDomain.getExpiryDate()).isEqualTo(DEFAULT_EXPIRY_DATE);
+        assertThat(testOrderBookDomain.getCcv()).isEqualTo(DEFAULT_CCV);
         assertThat(testOrderBookDomain.getShipTo()).isEqualTo(DEFAULT_SHIP_TO);
     }
 
@@ -174,6 +194,10 @@ public class OrderBookDomainResourceIntTest {
             .andExpect(jsonPath("$.[*].endDate").value(hasItem(DEFAULT_END_DATE.toString())))
             .andExpect(jsonPath("$.[*].orderAmmount").value(hasItem(DEFAULT_ORDER_AMMOUNT.intValue())))
             .andExpect(jsonPath("$.[*].orderStatus").value(hasItem(DEFAULT_ORDER_STATUS.toString())))
+            .andExpect(jsonPath("$.[*].nameOnCard").value(hasItem(DEFAULT_NAME_ON_CARD.toString())))
+            .andExpect(jsonPath("$.[*].creditCard").value(hasItem(DEFAULT_CREDIT_CARD.toString())))
+            .andExpect(jsonPath("$.[*].expiryDate").value(hasItem(DEFAULT_EXPIRY_DATE.toString())))
+            .andExpect(jsonPath("$.[*].ccv").value(hasItem(DEFAULT_CCV.toString())))
             .andExpect(jsonPath("$.[*].shipTo").value(hasItem(DEFAULT_SHIP_TO.toString())));
     }
 
@@ -192,6 +216,10 @@ public class OrderBookDomainResourceIntTest {
             .andExpect(jsonPath("$.endDate").value(DEFAULT_END_DATE.toString()))
             .andExpect(jsonPath("$.orderAmmount").value(DEFAULT_ORDER_AMMOUNT.intValue()))
             .andExpect(jsonPath("$.orderStatus").value(DEFAULT_ORDER_STATUS.toString()))
+            .andExpect(jsonPath("$.nameOnCard").value(DEFAULT_NAME_ON_CARD.toString()))
+            .andExpect(jsonPath("$.creditCard").value(DEFAULT_CREDIT_CARD.toString()))
+            .andExpect(jsonPath("$.expiryDate").value(DEFAULT_EXPIRY_DATE.toString()))
+            .andExpect(jsonPath("$.ccv").value(DEFAULT_CCV.toString()))
             .andExpect(jsonPath("$.shipTo").value(DEFAULT_SHIP_TO.toString()));
     }
 
@@ -219,6 +247,10 @@ public class OrderBookDomainResourceIntTest {
             .endDate(UPDATED_END_DATE)
             .orderAmmount(UPDATED_ORDER_AMMOUNT)
             .orderStatus(UPDATED_ORDER_STATUS)
+            .nameOnCard(UPDATED_NAME_ON_CARD)
+            .creditCard(UPDATED_CREDIT_CARD)
+            .expiryDate(UPDATED_EXPIRY_DATE)
+            .ccv(UPDATED_CCV)
             .shipTo(UPDATED_SHIP_TO);
         OrderBookDomainDTO orderBookDomainDTO = orderBookDomainMapper.toDto(updatedOrderBookDomain);
 
@@ -235,6 +267,10 @@ public class OrderBookDomainResourceIntTest {
         assertThat(testOrderBookDomain.getEndDate()).isEqualTo(UPDATED_END_DATE);
         assertThat(testOrderBookDomain.getOrderAmmount()).isEqualTo(UPDATED_ORDER_AMMOUNT);
         assertThat(testOrderBookDomain.getOrderStatus()).isEqualTo(UPDATED_ORDER_STATUS);
+        assertThat(testOrderBookDomain.getNameOnCard()).isEqualTo(UPDATED_NAME_ON_CARD);
+        assertThat(testOrderBookDomain.getCreditCard()).isEqualTo(UPDATED_CREDIT_CARD);
+        assertThat(testOrderBookDomain.getExpiryDate()).isEqualTo(UPDATED_EXPIRY_DATE);
+        assertThat(testOrderBookDomain.getCcv()).isEqualTo(UPDATED_CCV);
         assertThat(testOrderBookDomain.getShipTo()).isEqualTo(UPDATED_SHIP_TO);
     }
 

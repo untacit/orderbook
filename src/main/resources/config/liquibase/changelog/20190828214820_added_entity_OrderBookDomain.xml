@@ -38,47 +38,36 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="name_on_card" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="credit_card" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="expiry_date" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ccv" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
             <column name="ship_to" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="payment_details_id" type="bigint">
-                <constraints unique="true" nullable="true" />
+
+            <column name="buyer_id" type="bigint">
+                <constraints nullable="true" />
             </column>
+
+            <column name="store_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
-        
-        <createTable tableName="order_book_domain_book">
-            <column name="books_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-            <column name="order_book_domains_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-
-        <addPrimaryKey columnNames="order_book_domains_id, books_id" tableName="order_book_domain_book"/>
-        
-        <createTable tableName="order_book_domain_buyer">
-            <column name="buyers_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-            <column name="order_book_domains_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-
-        <addPrimaryKey columnNames="order_book_domains_id, buyers_id" tableName="order_book_domain_buyer"/>
-        
-        <createTable tableName="order_book_domain_store">
-            <column name="stores_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-            <column name="order_book_domains_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-
-        <addPrimaryKey columnNames="order_book_domains_id, stores_id" tableName="order_book_domain_store"/>
         
     </changeSet>
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->

@@ -8,14 +8,18 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity OrderBookDomain and its DTO OrderBookDomainDTO.
  */
-@Mapper(componentModel = "spring", uses = {PaymentDetailsMapper.class, BookMapper.class, BuyerMapper.class, StoreMapper.class})
+@Mapper(componentModel = "spring", uses = {BuyerMapper.class, StoreMapper.class})
 public interface OrderBookDomainMapper extends EntityMapper<OrderBookDomainDTO, OrderBookDomain> {
 
-    @Mapping(source = "paymentDetails.id", target = "paymentDetailsId")
+    @Mapping(source = "buyer.id", target = "buyerId")
+    @Mapping(source = "buyer.name", target = "buyerName")
+    @Mapping(source = "store.id", target = "storeId")
+    @Mapping(source = "store.name", target = "storeName")
     OrderBookDomainDTO toDto(OrderBookDomain orderBookDomain);
 
-    @Mapping(source = "paymentDetailsId", target = "paymentDetails")
     @Mapping(target = "purchasedBooks", ignore = true)
+    @Mapping(source = "buyerId", target = "buyer")
+    @Mapping(source = "storeId", target = "store")
     OrderBookDomain toEntity(OrderBookDomainDTO orderBookDomainDTO);
 
     default OrderBookDomain fromId(Long id) {

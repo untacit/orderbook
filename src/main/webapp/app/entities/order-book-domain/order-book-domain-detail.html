@@ -20,31 +20,33 @@
         <dd>
             <span>{{vm.orderBookDomain.orderStatus}}</span>
         </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.nameOnCard">Name On Card</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.nameOnCard}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.creditCard">Credit Card</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.creditCard}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.expiryDate">Expiry Date</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.expiryDate}}</span>
+        </dd>
+        <dt><span data-translate="orderbookApp.orderBookDomain.ccv">Ccv</span></dt>
+        <dd>
+            <span>{{vm.orderBookDomain.ccv}}</span>
+        </dd>
         <dt><span data-translate="orderbookApp.orderBookDomain.shipTo">Ship To</span></dt>
         <dd>
             <span>{{vm.orderBookDomain.shipTo}}</span>
         </dd>
-        <dt><span data-translate="orderbookApp.orderBookDomain.paymentDetails">Payment Details</span></dt>
-        <dd>
-            <a ui-sref="payment-details-detail({id:vm.orderBookDomain.paymentDetailsId})">{{vm.orderBookDomain.paymentDetailsId}}</a>
-        </dd>
-        <dt><span data-translate="orderbookApp.orderBookDomain.book">Book</span></dt>
-        <dd>
-            <span ng-repeat="book in vm.orderBookDomain.books">
-                <a ui-sref="book-detail({id: book.id})">{{book.id}}</a>{{$last ? '' : ', '}}
-            </span>
-        </dd>
         <dt><span data-translate="orderbookApp.orderBookDomain.buyer">Buyer</span></dt>
         <dd>
-            <span ng-repeat="buyer in vm.orderBookDomain.buyers">
-                <a ui-sref="buyer-detail({id: buyer.id})">{{buyer.id}}</a>{{$last ? '' : ', '}}
-            </span>
+            <a ui-sref="buyer-detail({id:vm.orderBookDomain.buyerId})">{{vm.orderBookDomain.buyerName}}</a>
         </dd>
         <dt><span data-translate="orderbookApp.orderBookDomain.store">Store</span></dt>
         <dd>
-            <span ng-repeat="store in vm.orderBookDomain.stores">
-                <a ui-sref="store-detail({id: store.id})">{{store.id}}</a>{{$last ? '' : ', '}}
-            </span>
+            <a ui-sref="store-detail({id:vm.orderBookDomain.storeId})">{{vm.orderBookDomain.storeName}}</a>
         </dd>
     </dl>
 

@@ -5,9 +5,9 @@
         .module('orderbookApp')
         .controller('OrderBookDomainDetailController', OrderBookDomainDetailController);
 
-    OrderBookDomainDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'OrderBookDomain', 'PaymentDetails', 'PurchasedBook', 'Book', 'Buyer', 'Store'];
+    OrderBookDomainDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'OrderBookDomain', 'PurchasedBook', 'Buyer', 'Store'];
 
-    function OrderBookDomainDetailController($scope, $rootScope, $stateParams, previousState, entity, OrderBookDomain, PaymentDetails, PurchasedBook, Book, Buyer, Store) {
+    function OrderBookDomainDetailController($scope, $rootScope, $stateParams, previousState, entity, OrderBookDomain, PurchasedBook, Buyer, Store) {
         var vm = this;
 
         vm.orderBookDomain = entity;

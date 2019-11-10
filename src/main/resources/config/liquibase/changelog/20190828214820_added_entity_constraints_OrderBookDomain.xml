@@ -8,44 +8,17 @@
     -->
     <changeSet id="20190828214820-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="payment_details_id"
+        <addForeignKeyConstraint baseColumnNames="buyer_id"
                                  baseTableName="order_book_domain"
-                                 constraintName="fk_order_book_domain_payment_details_id"
+                                 constraintName="fk_order_book_domain_buyer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="buyer"/>
+
+        <addForeignKeyConstraint baseColumnNames="store_id"
+                                 baseTableName="order_book_domain"
+                                 constraintName="fk_order_book_domain_store_id"
                                  referencedColumnNames="id"
                                  referencedTableName="store"/>
 
-        <addForeignKeyConstraint baseColumnNames="order_book_domains_id"
-                                 baseTableName="order_book_domain_book"
-                                 constraintName="fk_order_book_domain_book_order_book_domains_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="order_book_domain"/>
-        <addForeignKeyConstraint baseColumnNames="books_id"
-                                 baseTableName="order_book_domain_book"
-                                 constraintName="fk_order_book_domain_book_books_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="book"/>
-        
-        <addForeignKeyConstraint baseColumnNames="order_book_domains_id"
-                                 baseTableName="order_book_domain_buyer"
-                                 constraintName="fk_order_book_domain_buyer_order_book_domains_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="order_book_domain"/>
-        <addForeignKeyConstraint baseColumnNames="buyers_id"
-                                 baseTableName="order_book_domain_buyer"
-                                 constraintName="fk_order_book_domain_buyer_buyers_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="buyer"/>
-        
-        <addForeignKeyConstraint baseColumnNames="order_book_domains_id"
-                                 baseTableName="order_book_domain_store"
-                                 constraintName="fk_order_book_domain_store_order_book_domains_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="order_book_domain"/>
-        <addForeignKeyConstraint baseColumnNames="stores_id"
-                                 baseTableName="order_book_domain_store"
-                                 constraintName="fk_order_book_domain_store_stores_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="store"/>
-        
     </changeSet>
 </databaseChangeLog>

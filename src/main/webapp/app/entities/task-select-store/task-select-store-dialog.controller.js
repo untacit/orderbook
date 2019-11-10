@@ -5,14 +5,15 @@
         .module('orderbookApp')
         .controller('TaskSelectStoreDialogController', TaskSelectStoreDialogController);
 
-    TaskSelectStoreDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'currentTaskId', 'TaskSelectStore'];
+    TaskSelectStoreDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'currentTaskId', 'TaskSelectStore', 'Store'];
 
-    function TaskSelectStoreDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, currentTaskId, TaskSelectStore) {
+    function TaskSelectStoreDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, currentTaskId, TaskSelectStore, Store) {
         var vm = this;
 
         vm.taskSelectStore = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.stores = Store.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

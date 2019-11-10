@@ -22,6 +22,7 @@
                     <th><span data-translate="orderbookApp.purchasedBook.quantity">Quantity</span></th>
                     <th><span data-translate="orderbookApp.purchasedBook.price">Price</span></th>
                     <th><span data-translate="orderbookApp.purchasedBook.orderBookDomain">Order Book Domain</span></th>
+                    <th><span data-translate="orderbookApp.purchasedBook.book">Book</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -32,6 +33,9 @@
                     <td>{{purchasedBook.price}}</td>
                     <td>
                         <a ui-sref="order-book-domain-detail({id:purchasedBook.orderBookDomainId})">{{purchasedBook.orderBookDomainId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="book-detail({id:purchasedBook.bookId})">{{purchasedBook.bookId}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

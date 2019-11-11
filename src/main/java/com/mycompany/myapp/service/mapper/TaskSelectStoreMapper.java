@@ -22,6 +22,7 @@ public class TaskSelectStoreMapper {
 
 
     public void copyFromTaskDTOToProcessInstanceDTO(TaskSelectStoreDTO taskSelectStoreDTO, OrderBookProcessDTO orderBookProcessDTO) {
+        orderBookProcessDTO.getOrderBookDomain().setStoreId(taskSelectStoreDTO.getStoreId());
     }
 
 }

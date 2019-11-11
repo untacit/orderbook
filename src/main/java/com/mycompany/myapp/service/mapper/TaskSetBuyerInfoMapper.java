@@ -24,6 +24,7 @@ public class TaskSetBuyerInfoMapper {
 
     public void copyFromTaskDTOToProcessInstanceDTO(TaskSetBuyerInfoDTO taskSetBuyerInfoDTO, OrderBookProcessDTO orderBookProcessDTO) {
         orderBookProcessDTO.getOrderBookDomain().setShipTo(taskSetBuyerInfoDTO.getShipTo());
+        orderBookProcessDTO.getOrderBookDomain().setBuyerId(taskSetBuyerInfoDTO.getBuyerId());
     }
 
 }

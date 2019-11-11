@@ -4,9 +4,11 @@ import com.mycompany.myapp.annotation.UntacitTask;
 import com.mycompany.myapp.domain.OrderBookProcess;
 import com.mycompany.myapp.repository.OrderBookProcessRepository;
 import com.mycompany.myapp.service.dto.OrderBookProcessDTO;
+import com.mycompany.myapp.service.mapper.OrderBookDomainMapper;
 import com.mycompany.myapp.service.mapper.OrderBookProcessMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,6 +34,9 @@ public class OrderBookProcessService {
         this.orderBookProcessMapper = orderBookProcessMapper;
     }
 
+    @Autowired
+    private OrderBookDomainMapper orderBookDomainMapper;
+
     /**
      * Save a orderBookProcess.
      *
@@ -51,6 +56,7 @@ public class OrderBookProcessService {
     @UntacitTask
     public void saveProcessInstance(OrderBookProcessDTO orderBookProcessDTO) {
         OrderBookProcess orderBookProcess = orderBookProcessMapper.toEntity(orderBookProcessDTO);
+        orderBookProcess.setOrderBookDomain(orderBookDomainMapper.toEntity(orderBookProcessDTO.getOrderBookDomain()));
         orderBookProcessRepository.save(orderBookProcess);
     }
 

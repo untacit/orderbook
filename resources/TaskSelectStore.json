@@ -1,8 +1,15 @@
 {
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipName": "store",
+            "otherEntityName": "store",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
     "fields": [],
     "bpmnProcessDefinitionId": "procidOrderBook",
-    "bpmnTaskDefinitionId": "taskSelectStore",
+    "bpmnTaskDefinitionId": "taskSelectPickUpStore",
     "processEntityType": "OrderBookProcess",
     "domainEntityType": "OrderBookDomain"
 

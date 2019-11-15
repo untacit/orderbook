@@ -4,8 +4,13 @@
         {
             "relationshipType": "many-to-one",
             "otherEntityName": "orderBookDomain",
-            "otherEntityRelationshipName": "purchasedBook",
             "relationshipName": "orderBookDomain",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "book",
+            "relationshipName": "book",
             "otherEntityField": "id"
         }
     ],

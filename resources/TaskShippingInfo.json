@@ -1,10 +1,13 @@
 {
     "relationships": [],
     "fields": [
-
+        {
+            "fieldName": "shipTo",
+            "fieldType": "String"
+        }
     ],
     "bpmnProcessDefinitionId": "procidOrderBook",
-    "bpmnTaskDefinitionId": "taskShippingInfo",
+    "bpmnTaskDefinitionId": "taskAddShippingInfo",
     "processEntityType": "OrderBookProcess",
     "domainEntityType": "OrderBookDomain"
 }

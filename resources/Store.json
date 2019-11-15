@@ -24,12 +24,10 @@
     ],
     "relationships": [
         {
-            "relationshipType": "many-to-many",
+            "relationshipType": "one-to-many",
             "otherEntityName": "orderBookDomain",
-            "otherEntityRelationshipName": "store",
             "relationshipName": "orderBookDomain",
-            "otherEntityField": "id",
-            "ownerSide": false
+            "otherEntityField": "id"
         }
     ],
     "changelogDate": "20191109023548",

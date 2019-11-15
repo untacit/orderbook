@@ -10,12 +10,10 @@
     <include file="config/liquibase/changelog/20190828214820_added_entity_OrderBookProcess.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191109023550_added_entity_Book.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191109023547_added_entity_Buyer.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20191109023551_added_entity_OrderedBook.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20191109023548_added_entity_Store.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191109212352_added_entity_PurchasedBook.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191109023548_added_entity_Store.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20190828214820_added_entity_constraints_OrderBookDomain.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20191109023551_added_entity_constraints_OrderedBook.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191109212352_added_entity_constraints_PurchasedBook.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

@@ -1,17 +1,6 @@
 {
-    "relationships": [
-        {
-
-            "relationshipType": "one-to-many",
-            "otherEntityName": "orderedBook",
-            "otherEntityRelationshipName": "orderBookDomain",
-            "relationshipName": "orderedBook",
-            "ownerSide": true
-        }
-    ],
-    "fields": [
-
-    ],
+    "relationships": [],
+    "fields": [],
     "bpmnProcessDefinitionId": "procidOrderBook",
     "bpmnTaskDefinitionId": "taskSelectBook",
     "processEntityType": "OrderBookProcess",

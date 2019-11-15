@@ -4,7 +4,6 @@
         "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
         "menu": {
             "home": "Home",
-            "mytasks": "My Tasks",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
@@ -14,12 +13,9 @@
                 "orderBookProcess": "Order Book Process",
                 "book": "Book",
                 "buyer": "Buyer",
-                "location": "Location",
-                "orderedBook": "Ordered Book",
+                "purchasedBook": "Purchased Book",
                 "store": "Store",
                 "taskSelectBook": "Task Select Book",
-                "purchasedBook": "Purchased Book",
-                "paymentDetails": "Payment Details",
                 "taskSetBuyerInfo": "Task Set Buyer Info",
                 "taskSelectStore": "Task Select Store",
                 "taskShippingInfo": "Task Shipping Info",

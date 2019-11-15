@@ -2,42 +2,22 @@
     "fluentMethods": true,
     "relationships": [
         {
-            "relationshipType": "one-to-one",
-            "otherEntityName": "paymentDetails",
-            "otherEntityRelationshipName": "orderBookDomain",
-            "relationshipName": "paymentDetails",
-            "otherEntityField": "id",
-            "ownerSide": true
-        },
-        {
             "relationshipType": "one-to-many",
             "otherEntityName": "purchasedBook",
             "otherEntityRelationshipName": "orderBookDomain",
             "relationshipName": "purchasedBook"
         },
         {
-            "relationshipType": "many-to-many",
-            "otherEntityName": "book",
-            "otherEntityRelationshipName": "orderBookDomain",
-            "relationshipName": "book",
-            "otherEntityField": "id",
-            "ownerSide": true
-        },
-        {
-            "relationshipType": "many-to-many",
-            "otherEntityName": "buyer",
-            "otherEntityRelationshipName": "orderBookDomain",
             "relationshipName": "buyer",
-            "otherEntityField": "id",
-            "ownerSide": true
+            "otherEntityName": "buyer",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
         },
         {
-            "relationshipType": "many-to-many",
-            "otherEntityName": "store",
-            "otherEntityRelationshipName": "orderBookDomain",
             "relationshipName": "store",
-            "otherEntityField": "id",
-            "ownerSide": true
+            "otherEntityName": "store",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
         }
     ],
     "fields": [
@@ -55,6 +35,22 @@
         },
         {
             "fieldName": "orderStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nameOnCard",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "creditCard",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expiryDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ccv",
             "fieldType": "String"
         },
         {

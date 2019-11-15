@@ -39,7 +39,7 @@ scaffold entities
     yo jhipster-untacit:entity Buyer --regenerate
     yo jhipster-untacit:entity PurchasedBook --regenerate
     yo jhipster-untacit:entity Store --regenerate
-    yo jhipster-untacit:entity PaymentDetails --regenerate
+ 
 
 scaffold Task entities
 ---------------------
